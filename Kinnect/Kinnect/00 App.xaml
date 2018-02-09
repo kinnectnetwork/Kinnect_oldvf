@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Application xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Kinnect.App">
+	<Application.Resources>
+        <ResourceDictionary>
+            <Color x:Key="KinnectBlueColor">#EEEEEE</Color>
+            <Color x:Key="KinnectGreyColor">#888888</Color>
+            <OnPlatform x:Key="Lato-Regular" x:TypeArguments="x:String" iOS="Lato-Regular" Android="Lato-Regular.ttf#Lato-Regular.ttf" />
+            <OnPlatform x:Key="OpenSans-Regular" x:TypeArguments="x:String" iOS="OpenSans-Regular" Android="OpenSans-Regular.ttf#OpenSans-Regular.ttf" />
+            <OnPlatform x:Key="Bitter-Regular" x:TypeArguments="x:String" iOS="Bitter-Regular" Android="Bitter-Regular.ttf#Bitter-Regular.ttf" />
+
+            <Style x:Key="KinnectLabel" TargetType="Label">
+                <!--<Setter Property="FontFamily" Value="{StaticResource OpenSans-Regular}"/>-->
+            </Style>
+
+            <Style TargetType="Button">
+                <Setter Property="BackgroundColor" Value="{StaticResource KinnectBlueColor}"/>
+                <Setter Property="TextColor" Value="White"/>
+            </Style>
+
+            <Style x:Key="specialButton" TargetType="Button">
+                <Setter Property="BackgroundColor" Value="{StaticResource KinnectGreyColor}"/>
+                <Setter Property="TextColor" Value="White"/>
+                <!--<Setter Property="FontFamily" Value="{StaticResource Lato-Regular}" />-->
+            </Style>
+            
+        </ResourceDictionary>
+
+	</Application.Resources>
+</Application>

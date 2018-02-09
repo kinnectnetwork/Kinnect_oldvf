@@ -1,0 +1,79 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<StackLayout xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:Kinnect"
+             x:Class="Kinnect.SearchCard">
+
+    <StackLayout.Resources>
+        <ResourceDictionary>
+            <Style x:Key="BaseLabel" TargetType="Label">
+                <Setter Property="Margin" Value="15,5,10,0"/>
+                <Setter Property="FontSize" Value="14"/>
+                <!--<Setter Property="BackgroundColor" Value="White"/>-->
+                <Setter Property="VerticalOptions" Value="Center"/>
+            </Style>
+
+            <Style x:Key="AttributeLabel" TargetType="Label" BaseResourceKey="BaseLabel">
+                <Setter Property="TextColor" Value="#275657"/>
+            </Style>
+
+            <Style x:Key="ValueLabel" TargetType="Label" BaseResourceKey="BaseLabel">
+                <Setter Property="TextColor" Value="#717171"/>
+            </Style>
+        </ResourceDictionary>
+    </StackLayout.Resources>
+
+    <ScrollView Orientation="Vertical">
+        <Grid HorizontalOptions="Center" RowSpacing="0" ColumnSpacing="0" x:Name="OneGrid">
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="335" />
+                <RowDefinition Height="70" />
+            </Grid.RowDefinitions>
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="125" />
+                <ColumnDefinition Width="210" />
+            </Grid.ColumnDefinitions>
+
+            <!--Image-->
+            <Image Grid.Row="0" Grid.ColumnSpan="2" Source="http://placehold.it/400x400" 
+                   BackgroundColor="#CCCCCC" HorizontalOptions="FillAndExpand"/>
+
+            <StackLayout Grid.Row="1" Grid.Column="0" Padding="5" Spacing="0"
+                VerticalOptions="Fill" HorizontalOptions="Fill" BackgroundColor="#2C6385">
+
+                <Frame OutlineColor="White" Padding="0" HorizontalOptions="Center" VerticalOptions="EndAndExpand">
+                    <Label x:Name="ScoreValue" Text=" 90% " Font="18" Margin="1" BackgroundColor="#2C6385" TextColor="White"/>
+                </Frame>
+
+                <Label Text = "match" Font="12" HorizontalTextAlignment="Center" TextColor="White"/>
+            </StackLayout>
+
+            <StackLayout Grid.Row="1" Grid.Column="1" Spacing="0" BackgroundColor="#2C6385">
+                <Label x:Name="FullNameValue" TextColor="White" Font="18" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" Text="Name1" />
+                <Label x:Name="JobTitleValue" TextColor="White" Font="18" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" Text="Title1" />
+            </StackLayout>
+
+            <!--Field Name-->
+            <Label Grid.Row="2" Grid.Column="0" Style="{StaticResource AttributeLabel}" Text="Location" />
+            <Label Grid.Row="3" Grid.Column="0" Style="{StaticResource AttributeLabel}" Text="Industry" />
+            <Label Grid.Row="4" Grid.Column="0" Style="{StaticResource AttributeLabel}" Text="Focus Area" />
+            <Label Grid.Row="5" Grid.Column="0" Style="{StaticResource AttributeLabel}" Text="Organisation" />
+            <Label Grid.Row="6" Grid.Column="0" Style="{StaticResource AttributeLabel}" Text="Currently works in" />
+            <Label Grid.Row="7" Grid.Column="0" Style="{StaticResource AttributeLabel}" Text="Have works in" />
+            <Label Grid.Row="8" Grid.Column="0" Style="{StaticResource AttributeLabel}" Text="Professional Interests" />
+
+            <!--Value-->
+            <Label x:Name="LocationValue" Grid.Row="2" Grid.Column="1" Style="{StaticResource ValueLabel}" Text="Placeholder1" />
+            <Label x:Name="IndustryValue" Grid.Row="3" Grid.Column="1" Style="{StaticResource ValueLabel}" Text="Placeholder2" />
+            <Label x:Name="FocusAreaValue" Grid.Row="4" Grid.Column="1" Style="{StaticResource ValueLabel}" Text="Placeholder3" />
+            <Label x:Name="OrganisationValue" Grid.Row="5" Grid.Column="1" Style="{StaticResource ValueLabel}" Text="Placeholder4" />
+            <Label x:Name="CurrentEmployerValue" Grid.Row="6" Grid.Column="1" Style="{StaticResource ValueLabel}" Text="Placeholder5" />
+            <Label x:Name="OverseasExperienceValue" Grid.Row="7" Grid.Column="1" Style="{StaticResource ValueLabel}" Text="Placeholder6" />
+            <Label x:Name="ProfessionalInterestsValue" Grid.Row="8" Grid.Column="1" Style="{StaticResource ValueLabel}" Text="Placeholder7" />
+
+        </Grid>
+    </ScrollView>
+
+</StackLayout>

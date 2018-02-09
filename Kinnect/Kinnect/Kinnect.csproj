@@ -1,0 +1,58 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Xamarin.Forms" Version="2.5.0.122203" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Condition=" '$(EnableDefaultCompileItems)' == 'true' " Update="00 App.xaml.cs">
+      <DependentUpon>00 App.xaml</DependentUpon>
+    </Compile>
+    <Compile Condition=" '$(EnableDefaultCompileItems)' == 'true' " Update="01 MainPage.xaml.cs">
+      <DependentUpon>01 MainPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="02 HomePage.xaml.cs">
+      <DependentUpon>02 HomePage.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="03 SearchPage.xaml.cs">
+      <DependentUpon>03 SearchPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="04 ConnectPage.xaml.cs">
+      <DependentUpon>04 ConnectPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="05 NetworkPage.xaml.cs">
+      <DependentUpon>05 NetworkPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="06 ProfilePage.xaml.cs">
+      <DependentUpon>06 ProfilePage.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="03a SearchCard.xaml.cs">
+      <DependentUpon>03a SearchCard.xaml</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="02 HomePage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="04 ConnectPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="05 NetworkPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="03a SearchCard.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="06 ProfilePage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="03 SearchPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+</Project>
